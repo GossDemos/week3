@@ -1,0 +1,25 @@
+fetch.html
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Challenge 001</title><meta charset="utf-8">
+ </head>
+ <body>
+  
+<input type="text" id="inp" placeholder="Поле ввода"><Br>
+<button id="bt" onclick="func()">Нажми</button>
+ 
+<script>
+async function func(){
+  const input = document.querySelector('#inp');
+  const inputLink = input.value; //присваиваем содержимое инпута в новую переменную
+ 
+  const response = await fetch(inputLink);
+  const rezult = await response.text(); // прочитать тело ответа как текст
+ 
+  input.value = rezult;
+}
+</script>
+ </body>
+</html>
