@@ -18,7 +18,7 @@ require ('http')
 
   if (req.url === '/login/') {
     res.writeHead(200, '', CORS);
-    return res.end(`gossoudarev`);
+    return res.end(process.env.login);
   }  
 
   if (req.url === '/fetch/') {
